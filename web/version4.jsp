@@ -13,14 +13,9 @@
         <title>Calculator 3</title>
     </head>
     <body>
-        <%
-            Object result = request.getAttribute("result");
-            boolean show = result == null || result.toString().equals("");
-            String printResult = result == null ? "" : result.toString();
-        %>
         <nav>
             <div class="nav-wrapper teal">
-                <a href="#" class="brand-logo">Area Calculator Version 3</a>
+                <a href="#" class="brand-logo">Area Calculator Version 4</a>
                 <ul class="right side-nav">
                     <li><a href="version1.html">Version 1</a></li>
                     <li><a href="version2.jsp">Version 2</a></li>
@@ -68,7 +63,7 @@
                     <button class="btn right waves-effect" type="submit">Calculate</button>
                 </form>
             </div>
-                <p id="output" style="<% if(show) out.print("visibility: hidden;"); %>">Calculated value: <% out.print(printResult); %></p>
+                <p id="output">Calculated value: ${result}</p>
             </div>
             <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
             <script type="text/javascript" src="js/materialize.min.js"></script>
